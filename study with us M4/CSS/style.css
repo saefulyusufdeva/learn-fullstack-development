@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #ffffff;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 10px;
+}
+
+/* CARD */
+.box-outer {
+  position: relative;
+  width: 100%;
+  background: #fff;
+  border: 3px solid #000;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+/* IMAGE WRAPPER */
+.box-image {
+  position: relative; /* KUNCI */
+}
+
+/* BADGE FREE ONGKIR */
+.box-image-kupon {
+  position: absolute;
+  top: 10px;
+  left: 60px;
+  transform: translateX(-50%);
+
+  background: #7cff9b;
+  padding: 6px 14px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 6px;
+  white-space: nowrap;
+  z-index: 2;
+}
+
+.label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+  margin: 2%;
+}
+
+.Halal {
+  border: solid rgb(23, 23, 176);
+  color: rgb(57, 34, 184);
+  font-size: 14px;
+  background: rgb(95, 164, 237);
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+/* IMAGE */
+.box-image img {
+  width: 100%;
+  border-radius: 6px;
+  display: block;
+}
+
+/* TITLE */
+.box-outer h3 {
+  justify-content: left;
+  margin: 12px 0px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* PRICE */
+.price {
+  justify-content: left;
+  color: orange;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+/* BUTTON */
+.order {
+  width: 100%;
+  padding: 10px;
+  background: #ffe08a;
+  color: orange;
+  border: 3px solid orange;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.order:hover {
+  background: #ffd45a;
+}
+
+/* RESPONSIVE HP */
+@media (max-width: 851px) {
+  body {
+    grid-template-columns: repeat(3, 1fr); /* HP 2 kolom */
+  }
+
+  @media (max-width: 767px) {
+  body {
+    grid-template-columns: repeat(2, 1fr); /* HP 2 kolom */
+  }
+
+}
